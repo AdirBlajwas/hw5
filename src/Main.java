@@ -1,7 +1,11 @@
+import java.util.concurrent.locks.ReentrantLock;
+
+
 public class Main {
     public static void main(String[] args) {
         testPartA();
         testPartB();
+//        my_test();
     }
 
     private static void testPartA() {
@@ -47,6 +51,12 @@ public class Main {
         System.out.println();
     }
 
+
+    public static void my_test(){
+        ReentrantLock lock = new ReentrantLock();
+        boolean b = lock.tryLock();
+        System.out.println(lock);
+    }
     private static void testPartB() {
         System.out.println("Testing part B...");
         for (int i = 0; i < 100; i++) {
